@@ -30,7 +30,7 @@ func main() {
 	var host, storageDb string
 	flag.IntVar(&port, "port", 8080, "Port to start app")
 	flag.StringVar(&host, "host", "localhost", "Host to start app")
-	flag.StringVar(&storageDb, "storage-db", "storage.db", "Host to start app")
+	flag.StringVar(&storageDb, "storage-db", "storage.db", "SQLite db file")
 	flag.Parse()
 	if !flag.Parsed() {
 		panic("cannot initialize parameters")
