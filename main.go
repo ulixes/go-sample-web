@@ -123,7 +123,7 @@ func editHandler(store storage.Storage, w http.ResponseWriter, r *http.Request) 
 		found, err := store.Exists(ctx, id)
 		if !found {
 			http.NotFound(w, r)
-			return errors.New("id not found in request")
+			return errors.New("post not found in db")
 		}
 		post, err := store.Find(ctx, id)
 		if err != nil {
