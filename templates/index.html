@@ -1,0 +1,17 @@
+{{ define "index" }}
+{{ template "header" }}
+<div class="col-xs-2">
+</div>
+<div class="col-xs-8">
+{{ range . }}
+		<h2><b>{{ .Title }}</b><br/></h2>
+		<h4><i>{{ .Time.Format "2006-02-01 15:04" }}</i></h4>
+		{{ .Text }}<br/>
+		<a href="/edit?id={{ .ID }}">Edit</a>
+		<hr/>
+{{ end }}
+</div>
+<div class="col-xs-2">
+</div>
+{{ template "footer" }}
+{{ end }}
